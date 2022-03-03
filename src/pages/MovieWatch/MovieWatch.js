@@ -29,7 +29,6 @@ const MovieWatch = ({user, addWatchList, setAddWatchList, handleAddList, handleS
     return (
         <Wrapper>
             <Content>
-                <h1>Hello</h1>
                 <MovieVideo 
                     user={user} 
                     movie={movie} 
@@ -38,10 +37,10 @@ const MovieWatch = ({user, addWatchList, setAddWatchList, handleAddList, handleS
                     handleAddList={handleAddList}
                 />
             </Content>
+            <div class="fb-comments" data-href={currentUrl} data-width="100%" data-numposts="5"></div>
             {(movie.similarMovie && movie.recommendMovie) 
                 ? <RecommendMovie similarMovie={movie.similarMovie} recommendMovie={movie.recommendMovie} />
                 : <div>Hello</div>}
-            <div class="fb-comments" data-href="http://localhost:3000" data-width="100%" data-numposts="5"></div>
             <ScrollTop handleScrollTop={handleScrollTop}/>
         </Wrapper>
     )

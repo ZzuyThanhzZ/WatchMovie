@@ -21,7 +21,6 @@ function App() {
   
   const [user, setUser] = useContext(Context);
   const [addWatchList, setAddWatchList] = useState(false);
-  console.log(user);
 
   useEffect(() => {
     if(user.name === '') {
@@ -94,7 +93,7 @@ function App() {
           <Route 
             path="/movie/:movieId/watch" 
             element={
-              <MovieWatch 
+              <MovieWatch
                 user={user} 
                 addWatchList={addWatchList}
                 setAddWatchList={setAddWatchList}
