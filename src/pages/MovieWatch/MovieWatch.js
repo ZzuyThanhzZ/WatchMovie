@@ -14,6 +14,9 @@ import {useMovieFetch} from '../../hooks/useMovieFetch';
 const MovieWatch = ({user, addWatchList, setAddWatchList, handleAddList, handleScrollTop}) => {
     const {movieId} = useParams();
 
+    const currentUrl = window.location.href;
+    console.log(currentUrl);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [movieId])
@@ -26,18 +29,19 @@ const MovieWatch = ({user, addWatchList, setAddWatchList, handleAddList, handleS
     return (
         <Wrapper>
             <Content>
-                {/* <MovieVideo 
+                <h1>Hello</h1>
+                <MovieVideo 
                     user={user} 
                     movie={movie} 
                     addWatchList={addWatchList} 
                     setAddWatchList={setAddWatchList} 
                     handleAddList={handleAddList}
-                /> */}
+                />
             </Content>
             {(movie.similarMovie && movie.recommendMovie) 
                 ? <RecommendMovie similarMovie={movie.similarMovie} recommendMovie={movie.recommendMovie} />
                 : <div>Hello</div>}
-            <div class="fb-comments" data-href="https://emovie.netlify.app/" data-width="750" data-numposts="5"></div>
+            <div class="fb-comments" data-href="http://localhost:3000" data-width="100%" data-numposts="5"></div>
             <ScrollTop handleScrollTop={handleScrollTop}/>
         </Wrapper>
     )
