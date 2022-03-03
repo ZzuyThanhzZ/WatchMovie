@@ -37,7 +37,6 @@ const MovieWatch = ({user, addWatchList, setAddWatchList, handleAddList, handleS
                     handleAddList={handleAddList}
                 />
             </Content>
-            <div class="fb-comments" data-href={currentUrl} data-width="100%" data-numposts="5"></div>
             {(movie.similarMovie && movie.recommendMovie) 
                 ? <RecommendMovie similarMovie={movie.similarMovie} recommendMovie={movie.recommendMovie} />
                 : <div>Hello</div>}

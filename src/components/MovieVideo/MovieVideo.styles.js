@@ -19,7 +19,7 @@ export const Content = styled.div`
     iframe {
         border-radius: 4px;
         width: 100%;
-        height: 550px;
+        height: 600px;
 
         @media screen and (max-width: 1024px) {
             height: 450px;
