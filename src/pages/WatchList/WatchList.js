@@ -18,7 +18,7 @@ const WatchList = ({user, setUser}) => {
         <Wrapper>
             <Content>
                 <h1>My List</h1>
-                {user.movieAdded.map(movie => {
+                {user.movieAdded.length > 0 ? user.movieAdded.map(movie => {
                     return (
                         <div key={movie.id} className="movie-container">
                             <div className="thumb">
@@ -48,7 +48,9 @@ const WatchList = ({user, setUser}) => {
                             </div>
                         </div>
                     )
-                })}
+                })
+                : <p>You don't have any movies in your wishlist!</p>
+            }
             </Content>
         </Wrapper>
     )
