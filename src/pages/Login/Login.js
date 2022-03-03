@@ -21,7 +21,6 @@ const Login = () => {
     const [error, setError] = useState(false);
 
     const [user, setUser] = useContext(Context);
-    console.log(user);
 
     const navigate = useNavigate();
 
@@ -44,7 +43,6 @@ const Login = () => {
             );
 
             const localUser = isPersistedUser(`${username}`);
-            console.log(localUser);
             if(localUser) {
                 setUser(localUser)
             } else {

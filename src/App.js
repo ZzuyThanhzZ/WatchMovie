@@ -14,7 +14,7 @@ import {GlobalStyle} from './GlobalStyle.js';
 //Context
 import {Context, initialState} from './context';
 //Helpers
-import {isPersistedUser} from './helpers';
+import {isPersistedState} from './helpers';
 
 
 function App() {
@@ -24,12 +24,10 @@ function App() {
 
   useEffect(() => {
     if(user.name === '') {
-        const localUser = isPersistedUser(`${user.name}`);
-        console.log('Lay tu local ne');
-        console.log(localUser);
+        const userUser = isPersistedState(`user`);
 
-        if(localUser) {
-            setUser(localUser);
+        if(userUser) {
+            setUser(userUser);
             return;
         }
     }
@@ -38,6 +36,10 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem(`${user.name}`, JSON.stringify(user));
+  }, [user])
+
+  useEffect(() => {
+    sessionStorage.setItem(`user`, JSON.stringify(user));
   }, [user])
 
   

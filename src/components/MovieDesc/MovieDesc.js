@@ -13,8 +13,6 @@ import Trailer from '../Trailer/Trailer';
 const MovieDesc = ({ movie, user, addWatchList, setAddWatchList, handleAddList }) => {
 
     const [trailerModalOpened, setTrailerModalOpened] = useState(false);
-
-    console.log(user);
     
     useEffect(() => {
         if(user.movieAdded.find(el => el.id === movie.id)) {

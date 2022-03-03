@@ -21,7 +21,6 @@ import {Wrapper} from './Home.styles';
 const Home = ({handleScrollTop}) => {
 
     const { state, loading, error, searchTerm, setIsLoadingMore } = useHomeFetch();
-    console.log(state);
 
     const randomNum = Math.floor(Math.random() * 20);
 

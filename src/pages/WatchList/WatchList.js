@@ -6,8 +6,6 @@ import {IMAGE_BASE_URL, POSTER_SIZE} from '../../config';
 
 
 const WatchList = ({user, setUser}) => {
-
-    console.log(user);
     
     const handleRemove = (movie) => {
         setUser(prevUser => ({

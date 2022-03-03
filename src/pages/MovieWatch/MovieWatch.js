@@ -14,9 +14,6 @@ import {useMovieFetch} from '../../hooks/useMovieFetch';
 const MovieWatch = ({user, addWatchList, setAddWatchList, handleAddList, handleScrollTop}) => {
     const {movieId} = useParams();
 
-    const currentUrl = window.location.href;
-    console.log(currentUrl);
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [movieId])

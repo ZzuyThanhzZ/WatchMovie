@@ -15,8 +15,6 @@ const MovieVideo = ({movie, user, addWatchList, setAddWatchList, handleAddList})
         }
     }, [setAddWatchList, user.movieAdded, movie.id])
 
-    console.log(user);
-
     return (
         <Wrapper>
             <Content>
