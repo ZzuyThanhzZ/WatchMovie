@@ -16,7 +16,6 @@ const MovieWatch = ({user, addWatchList, setAddWatchList, handleAddList, handleS
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        console.log('Hello teacher?????????');
     }, [movieId])
 
     const {state: movie, loading, error} = useMovieFetch(movieId);
